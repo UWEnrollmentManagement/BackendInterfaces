@@ -2,8 +2,7 @@
 
 namespace UWDOEM\REST\Backend\Mediator;
 
-
-Interface MediatorInterface
+interface MediatorInterface
 {
 
     const COND_GT = '>';
@@ -52,7 +51,7 @@ Interface MediatorInterface
      * Returns a resource given a primary key, or false if the resource can't be found.
      *
      * @param string $resourceType
-     * @param mixed $key
+     * @param mixed  $key
      * @return mixed|false
      */
     public function retrieve($resourceType, $key);
@@ -68,7 +67,7 @@ Interface MediatorInterface
     /**
      * If you give me a "collection" then I will give you an iterable of resources
      *
-     * @param $collection
+     * @param mixed $collection
      * @return mixed
      */
     public function collectionToIterable($collection);
@@ -77,8 +76,8 @@ Interface MediatorInterface
      * Limits the number of resources that will be returned when a $collection is
      * iterated.
      *
-     * @param mixed $collection
-     * @param int limit
+     * @param mixed   $collection
+     * @param integer $limit
      * @return mixed
      */
     public function limit($collection, $limit);
@@ -87,8 +86,8 @@ Interface MediatorInterface
      * Sets the first element that will be returned when a $collection is
      * iterated.
      *
-     * @param $collection
-     * @param int $offset
+     * @param mixed   $collection
+     * @param integer $offset
      * @return mixed
      */
     public function offset($collection, $offset);
@@ -96,18 +95,18 @@ Interface MediatorInterface
     /**
      * Filters a collection according to the given criteria
      *
-     * @param $collection
-     * @param $attribute
-     * @param $operator
-     * @param null $value
+     * @param mixed      $collection
+     * @param string     $attribute
+     * @param string     $operator
+     * @param mixed|null $value
      * @return mixed
      */
-    public function filter($collection, $attribute, $operator, $value=null);
+    public function filter($collection, $attribute, $operator, $value = null);
 
     /**
      * Deletes a given resource. Return true on success or false on failure to delete.
      *
-     * @param $resource
+     * @param mixed $resource
      * @return boolean
      */
     public function delete($resource);
@@ -120,12 +119,12 @@ Interface MediatorInterface
      * @param array $attributes
      * @return mixed
      */
-    public function setAttributes($resource, $attributes);
+    public function setAttributes($resource, array $attributes);
 
     /**
      * Returns a key => value array of the resource's attributes.
      *
-     * @param array $resources
+     * @param mixed $resource
      * @return mixed
      */
     public function getAttributes($resource);
@@ -145,5 +144,4 @@ Interface MediatorInterface
      * @return string[]
      */
     public function error();
-
 }

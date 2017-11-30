@@ -6,5 +6,6 @@
         "slim/slim": "^3.8"
     },
     "require-dev": {
+        "uwdoem/standard": "^1.4"
     }
 }
