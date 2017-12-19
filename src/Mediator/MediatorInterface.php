@@ -93,6 +93,14 @@ interface MediatorInterface
     public function offset($collection, $offset);
 
     /**
+     * Return a count of resources available in the $collection.
+     *
+     * @param $collection
+     * @return integer
+     */
+    public function count($collection);
+
+    /**
      * Filters a collection according to the given criteria
      *
      * @param mixed      $collection
