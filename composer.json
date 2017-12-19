@@ -1,5 +1,5 @@
 {
-    "name": "uwdoem/rest-backend-interfaces",
+    "name": "uwdoem/backend-interfaces",
     "description": "Interfaces for the UWDOEM REST backend framework.",
     "license": "MIT",
     "require": {
