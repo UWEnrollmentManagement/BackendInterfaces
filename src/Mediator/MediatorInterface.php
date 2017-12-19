@@ -1,6 +1,6 @@
 <?php
 
-namespace UWDOEM\REST\Backend\Mediator;
+namespace UWDOEM\Backend\Mediator;
 
 interface MediatorInterface
 {
